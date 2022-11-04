@@ -25,15 +25,10 @@ if (!defined('prefixPath')) {
 	define('prependPrefixPath',		"");
 }
 
-if ($_SERVER['SERVER_NAME'] == "localhost") {
-    define ('sysPathRoot', 				"http://localhost");
-    define ('sysPath', 					"http://localhost/".prependPrefixPath);
-    
-}
-else {
-    define ('sysPathRoot', 				"http://".$_SERVER['SERVER_NAME']);
-    define ('sysPath', 					"http://".$_SERVER['SERVER_NAME']);
-}
+//    define ('sysPathRoot', 				"http://".$_SERVER['HTTP_HOST']);
+//    define ('sysPath', 					"http://".$_SERVER['HTTP_HOST']);
+define ('sysPathRoot','');
+define ('sysPath','');
 
 require_once(prefixPath."cLib/cErrorHandler.php");
 require_once(prefixPath."cLib/cAutoLoader.php");

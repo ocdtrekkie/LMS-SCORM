@@ -31,19 +31,19 @@ class cLib_cDatabase {
             //
             // If it local server use these settings
             //
-            $_cDB_PASS = "password";
+            $_cDB_PASS = "root";
             $_cDB_USER = 'root';
-            $_cDB_NAME = 'LMS';
-            $_cDB_HOST = 'localhost:3306';
+            $_cDB_NAME = 'app';
+            $_cDB_HOST = 'localhost';
         }
         else {
             //
             // If it live server, you may want to change this to different settings
             //
-            $_cDB_PASS = "password";
+            $_cDB_PASS = "root";
             $_cDB_USER = 'root';
-            $_cDB_NAME = 'LMS';
-            $_cDB_HOST = 'localhost:3306';                
+            $_cDB_NAME = 'app';
+            $_cDB_HOST = 'localhost';                
         }
         $conn = @new mysqli($_cDB_HOST, $_cDB_USER, $_cDB_PASS, $_cDB_NAME);
             
